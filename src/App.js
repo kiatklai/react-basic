@@ -1,4 +1,4 @@
-const Title =()=><h1>収入支出プログラム</h1>
+const Title =()=><h1 style={{color:"red",textAlign:"center",fontSize:"3rem"}}>収入支出プログラム</h1>
 const Description =()=><p>一日の情報</p>
 
 const Transaction =()=>{
