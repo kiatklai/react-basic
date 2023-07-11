@@ -1,13 +1,12 @@
 import Transaction from "./component/Transaction";
+import './App.css';
 
-const Title =()=><h1 style={{color:"red",textAlign:"center",fontSize:"3rem"}}>収入支出プログラム</h1>
-const Description =()=><p>一日の情報</p>
+const Title =()=><h1 style={{color:"red",textAlign:"center",fontSize:"2rem"}}>収入支出プログラム</h1>
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Title/>
-      <Description/>
       <Transaction/>
     </div>
   );
