@@ -1,26 +1,36 @@
+import { useState } from 'react'
 import './FormComponent.css'
 
 const FormComponent =()=>{
+  const [title,setTitle] = useState('')
+  const [amount,setAmount] = useState(0)
+
   const inputTitle=(event)=>{
-    console.log(event.target.value)
+    setTitle(event.target.value)
   }
   const inputAmount=(event)=>{
-    console.log(event.target.value)
+    setAmount(event.target.value)
   }
   const saveItem=(event)=>{
     event.preventDefault()
-    console.log("data was save")
+    const itemData = {
+      title:title,
+      amount:Number(amount)
+    }
+    console.log(itemData)
+    setTitle('')
+    setAmount(0)
   }
   return(
     <div>
       <form onSubmit={saveItem}>
         <div className="form-control">
           <label>リスト</label>
-          <input type="text" placeholder="タイトルなどを入力ください" onChange={inputTitle}/>
+          <input type="text" placeholder="タイトルなどを入力ください" onChange={inputTitle} value={title}/>
         </div>
         <div className="form-control">
           <label>費用</label>
-          <input type="number" placeholder="(+収入, -支出)" onChange={inputAmount}/>
+          <input type="number" placeholder="(+収入, -支出)" onChange={inputAmount} value={amount}/>
         </div>
         <div>
           <button type="submit" className='btn'>追加する</button>
