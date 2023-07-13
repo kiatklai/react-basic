@@ -14,7 +14,7 @@ function App() {
     })
   }
   return (
-    <DataContext.Provider value={"oohgotto"}>
+    <DataContext.Provider value={"Hello React"}>
       <div className="container">
         <Title/>
         <FormComponent onAddItem={onAddNewItem}/>
