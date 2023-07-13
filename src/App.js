@@ -8,7 +8,13 @@ import Reportcomponent from "./component/ReportComponent";
 const Title =()=><h1 style={{color:"red",textAlign:"center",fontSize:"2rem"}}>収入支出プログラム</h1>
 
 function App() {
-  const [items,setItem] = useState([])
+  const initState = [
+    {id:1,title:"ローン",amount:-100000},
+    {id:2,title:"給料",amount:300000},
+    {id:3,title:"交通費",amount:-12000},
+    {id:4,title:"食費",amount:-10000}
+  ]
+  const [items,setItem] = useState(initState)
 
   const [reportIncome,setReportIncome] = useState(0)
   const [reportExpense,setReportExpense] = useState(0)
