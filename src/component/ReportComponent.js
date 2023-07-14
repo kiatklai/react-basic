@@ -7,7 +7,7 @@ const Reportcomponent=()=>{
   return (
     <div>
       <h4>残高（円）</h4>
-      <h1>{income-expense}</h1>
+      <h1>{(income-expense).toFixed(2)}</h1>
       <div className="report-container">
         <div>
           <h4>総収入</h4>
